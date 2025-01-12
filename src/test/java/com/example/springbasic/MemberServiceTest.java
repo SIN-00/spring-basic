@@ -4,13 +4,21 @@ import member.Grade;
 import member.Member;
 import member.MemberService;
 import member.MemberServiceImpl;
+import order.OrderService;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class MemberServiceTest {
 
-    AppConfig appConfig = new AppConfig();
-    MemberService memberService = appConfig.memberService();
+    MemberService memberService;
+    OrderService orderService;
+
+    @BeforeEach
+    public void beforEach() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
 
     @Test
     void join() {
