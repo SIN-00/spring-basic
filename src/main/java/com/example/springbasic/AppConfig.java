@@ -15,18 +15,41 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
+    //@Bean memberService -> new MemoryMemberRepository()
+    //@Bean orderService -> new MemoryMemberRepository()
+    //Singleton깨지는거 아니야?? -> 테스트해보자 ConfigurationTest => 똑같다
+
+    /*
+        원래 예상 호출 코드
+        call AppConfig.memberService
+        call AppConfig.memberRepository
+        call AppConfig.memberRepository
+        call AppConfig.orderService
+        call AppConfig.memberRepository
+     */
+
+    /*
+        실제 호출
+        call AppConfig.memberService
+        call AppConfig.memberRepository
+        call AppConfig.orderService
+        => call AppConfig.memberRepository 메서드가 한번 호출된다
+     */
     @Bean
     public MemberService memberService() {
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
     public MemberRepository memberRepository() {
+        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();
     }
 
     @Bean
     public OrderService orderService() {
+        System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(
                 memberRepository(),
                 discountPolicy()
