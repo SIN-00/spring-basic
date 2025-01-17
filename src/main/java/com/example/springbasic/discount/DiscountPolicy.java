@@ -1,6 +1,6 @@
-package discount;
+package com.example.springbasic.discount;
 
-import member.Member;
+import com.example.springbasic.member.Member;
 
 public interface DiscountPolicy {
     /*

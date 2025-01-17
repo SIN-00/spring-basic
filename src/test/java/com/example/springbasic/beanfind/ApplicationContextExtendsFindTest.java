@@ -1,8 +1,8 @@
 package com.example.springbasic.beanfind;
 
-import discount.DiscountPolicy;
-import discount.FixDiscountPolicy;
-import discount.RateDiscountPolicy;
+import com.example.springbasic.discount.DiscountPolicy;
+import com.example.springbasic.discount.FixDiscountPolicy;
+import com.example.springbasic.discount.RateDiscountPolicy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

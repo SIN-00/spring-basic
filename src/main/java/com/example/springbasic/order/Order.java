@@ -1,4 +1,4 @@
-package order;
+package com.example.springbasic.order;
 
 public class Order {
 

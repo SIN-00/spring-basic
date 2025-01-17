@@ -1,9 +1,9 @@
 package com.example.springbasic.singleton;
 
 import com.example.springbasic.AppConfig;
-import member.MemberRepository;
-import member.MemberServiceImpl;
-import order.OrderServiceImpl;
+import com.example.springbasic.member.MemberRepository;
+import com.example.springbasic.member.MemberServiceImpl;
+import com.example.springbasic.order.OrderServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;

@@ -1,9 +1,8 @@
 package com.example.springbasic;
 
-import discount.RateDiscountPolicy;
-import member.Grade;
-import member.Member;
-import org.assertj.core.api.Assertions;
+import com.example.springbasic.discount.RateDiscountPolicy;
+import com.example.springbasic.member.Grade;
+import com.example.springbasic.member.Member;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

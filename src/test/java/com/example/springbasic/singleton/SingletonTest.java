@@ -1,8 +1,7 @@
 package com.example.springbasic.singleton;
 
 import com.example.springbasic.AppConfig;
-import member.MemberService;
-import org.assertj.core.api.Assertions;
+import com.example.springbasic.member.MemberService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;

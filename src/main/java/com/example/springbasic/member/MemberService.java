@@ -1,4 +1,4 @@
-package member;
+package com.example.springbasic.member;
 
 public interface MemberService {
 

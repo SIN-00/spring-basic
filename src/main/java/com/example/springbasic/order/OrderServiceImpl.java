@@ -1,11 +1,12 @@
-package order;
+package com.example.springbasic.order;
 
-import discount.DiscountPolicy;
-import discount.FixDiscountPolicy;
-import member.Member;
-import member.MemberRepository;
-import member.MemoryMemberRepository;
+import com.example.springbasic.discount.DiscountPolicy;
+import com.example.springbasic.member.Member;
+import com.example.springbasic.member.MemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderServiceImpl implements OrderService {
 
     private MemberRepository memberRepository;
@@ -15,6 +16,7 @@ public class OrderServiceImpl implements OrderService {
     //이렇게하면 인터페이스만 의존, 구현체에 의존하지 않음
     //여기서 할당하는 대신에 OrderServiceImpl에 구현 객체를 대신 생성하고 주입시켜주어야한다.
 
+    @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;

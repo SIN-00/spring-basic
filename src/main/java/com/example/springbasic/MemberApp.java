@@ -1,9 +1,8 @@
 package com.example.springbasic;
 
-import member.Grade;
-import member.Member;
-import member.MemberService;
-import member.MemberServiceImpl;
+import com.example.springbasic.member.Grade;
+import com.example.springbasic.member.Member;
+import com.example.springbasic.member.MemberService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

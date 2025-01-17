@@ -1,15 +1,12 @@
 package com.example.springbasic;
 
-import member.Grade;
-import member.Member;
-import member.MemberService;
-import member.MemberServiceImpl;
-import order.Order;
-import order.OrderService;
-import order.OrderServiceImpl;
+import com.example.springbasic.member.Grade;
+import com.example.springbasic.member.Member;
+import com.example.springbasic.member.MemberService;
+import com.example.springbasic.order.Order;
+import com.example.springbasic.order.OrderService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class OrderApp {
     public static void main(String[] args) {

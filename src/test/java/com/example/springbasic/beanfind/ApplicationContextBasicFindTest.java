@@ -1,8 +1,8 @@
 package com.example.springbasic.beanfind;
 
 import com.example.springbasic.AppConfig;
-import member.MemberService;
-import member.MemberServiceImpl;
+import com.example.springbasic.member.MemberService;
+import com.example.springbasic.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

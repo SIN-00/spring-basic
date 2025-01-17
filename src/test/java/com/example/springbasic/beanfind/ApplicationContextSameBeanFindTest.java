@@ -1,7 +1,7 @@
 package com.example.springbasic.beanfind;
 
-import member.MemberRepository;
-import member.MemoryMemberRepository;
+import com.example.springbasic.member.MemberRepository;
+import com.example.springbasic.member.MemoryMemberRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
