@@ -1,5 +1,7 @@
 package com.example.springbasic.member;
 
+import org.springframework.stereotype.Component;
+
 public class Member {
 
     private Long id;
