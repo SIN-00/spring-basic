@@ -3,11 +3,13 @@ package com.example.springbasic.order;
 import com.example.springbasic.discount.DiscountPolicy;
 import com.example.springbasic.member.Member;
 import com.example.springbasic.member.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 
     private final MemberRepository memberRepository;
@@ -16,12 +18,6 @@ public class OrderServiceImpl implements OrderService {
     private final DiscountPolicy discountPolicy;
     //이렇게하면 인터페이스만 의존, 구현체에 의존하지 않음
     //여기서 할당하는 대신에 OrderServiceImpl에 구현 객체를 대신 생성하고 주입시켜주어야한다.
-
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
