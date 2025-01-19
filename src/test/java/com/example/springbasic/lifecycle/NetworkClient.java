@@ -1,9 +1,9 @@
 package com.example.springbasic.lifecycle;
 
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 
-public class NetworkClient implements InitializingBean, DisposableBean {
+public class NetworkClient  {
 
     private String url;
 
@@ -18,6 +18,7 @@ public class NetworkClient implements InitializingBean, DisposableBean {
     }
 
     //서비스 시작시 호출
+
     public void connect() {
         System.out.println("connect: " + url);
     }
@@ -32,15 +33,17 @@ public class NetworkClient implements InitializingBean, DisposableBean {
     }
 
     //스프링 컨테이너 올라올때 생성 후 의존관계 주입 끝나면 호출
-    @Override
-    public void afterPropertiesSet() throws Exception {
+    @PostConstruct
+    public void init() {
+        System.out.println("NetworkClient.init");
         connect();
         call("초기화 연결 메세지");
     }
 
     //빈 종료 될때
-    @Override
-    public void destroy() throws Exception {
+    @PreDestroy
+    public void close(){
+        System.out.println("NetworkClient.close");
         disconnect();
     }
 }
